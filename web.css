@@ -1,0 +1,46 @@
+/* styles.css */
+
+#wrapper {
+  display: flex;
+}
+
+#sidebar {
+  width: 20%;
+  background-color: #f4f4f4;
+}
+
+#content {
+  width: 80%;
+  padding: 20px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+.share-buttons {
+  /* Add styles for share buttons */
+}
+
+.image-with-overlay {
+  /* Add styles for image with text overlay */
+}
