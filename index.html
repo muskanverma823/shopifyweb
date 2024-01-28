@@ -1,0 +1,76 @@
+<!-- product.liquid -->
+
+<!DOCTYPE html>
+<html lang="{{ shop.locale }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ product.title | escape }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ content_for_header }}
+  <link rel="stylesheet" href="{{ 'styles.css' | asset_url }}">
+</head>
+<body>
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Cart</a></li>
+      </ul>
+    </div>
+
+    <!-- Product Content -->
+    <div id="content">
+      <!-- Product Title -->
+      <h1>{{ product.title }}</h1>
+
+      <!-- Product Price -->
+      <p>Price: ${{ product.price | money }}</p>
+
+      <!-- Product YouTube Video -->
+      <div class="video-container">
+        <!-- Insert your YouTube video embed code here -->
+      </div>
+
+      <!-- Product Description -->
+      <div class="description">
+        {{ product.description }}
+      </div>
+
+      <!-- Product Form -->
+      <form action="/cart/add" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+        <button type="submit">Add to Cart</button>
+      </form>
+
+      <!-- Share Button -->
+      <div class="share-buttons">
+        <!-- Add your share button code here -->
+      </div>
+      
+      <!-- Divider -->
+      <hr>
+
+      <!-- Recently Viewed Products -->
+      <h2>Recently Viewed</h2>
+      <!-- Insert code for recently viewed products here -->
+
+      <!-- Divider -->
+      <hr>
+
+      <!-- Image with Text Overlay -->
+      <div class="image-with-overlay">
+        <!-- Insert image with text overlay code here -->
+      </div>
+
+      <!-- Divider -->
+      <hr>
+
+      <!-- Related Products -->
+      <h2>Related Products</h2>
+      <!-- Insert code for related products here -->
+    </div>
+  </div>
+</body>
+</html>
